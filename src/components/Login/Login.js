@@ -28,39 +28,44 @@ const Login = () => {
           id="exampleInputPassword1"
         />
       </div>
-      <div className="mb-3 form-check">
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Access type
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a class="dropdown-item" href="#">
-                Security
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                Administrator
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                Resident
-              </a>
-            </li>
-          </ul>
+      <div className=" buttons-container">
+        <div className="mb-3 form-check">
+          <div className="dropdown">
+            <button
+              className="btn btn-info dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Access type
+            </button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a className="dropdown-item" href="#">
+                  Security
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Administrator
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Resident
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <button type="submit" className="btn btn-primary form-button">
+          Submit
+        </button>
+        <button type="button" className="btn btn-secondary form-button">
+          Request Access
+        </button>
       </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
     </form>
   );
 };

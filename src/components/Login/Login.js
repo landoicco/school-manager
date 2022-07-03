@@ -4,30 +4,26 @@ import "./Login.css";
 const Login = () => {
   return (
     <form className="centered-form">
-      <div className="mb-3">
-        <label for="exampleInputEmail1" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
-        </div>
-      </div>
-      <div className="mb-3">
-        <label for="exampleInputPassword1" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
+      <h2 className="centered-title">Login</h2>
+      <label for="exampleFormControlInput1" className="form-label">
+        Email address
+      </label>
+      <input
+        type="email"
+        className="form-control"
+        id="exampleFormControlInput1"
+        placeholder="ex. name@example.com"
+      />
+      <label for="inputPassword5" class="form-label">
+        Password
+      </label>
+      <input
+        type="password"
+        id="inputPassword5"
+        className="form-control"
+        aria-describedby="passwordHelpBlock"
+      />
+
       <div className=" buttons-container">
         <div className="mb-3 form-check">
           <div className="dropdown">

@@ -13,11 +13,10 @@
   padding: 20px;
 }
 
-.form-button {
-  margin: 5px;
-  align-items: center;
+.form-button-container {
+  padding: 10px;
 }
 
-.buttons-container {
-  margin: 30px;
+.form-button {
+  margin: 10px;
 }

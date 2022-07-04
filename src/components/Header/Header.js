@@ -2,12 +2,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         Vecinos App
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarsExample01"
@@ -15,29 +15,29 @@ const Header = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse" id="navbarsExample01">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">
+              Home <span className="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li className="nav-item">
+            <a className="nav-link" href="#">
               Link
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">
+          <li className="nav-item">
+            <a className="nav-link disabled" href="#">
               Disabled
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="http://example.com"
               id="dropdown01"
               data-toggle="dropdown"
@@ -46,22 +46,22 @@ const Header = () => {
             >
               Dropdown
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu" aria-labelledby="dropdown01">
+              <a className="dropdown-item" href="#">
                 Action
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Another action
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Something else here
               </a>
             </div>
           </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
+        <form className="form-inline my-2 my-md-0">
           <input
-            class="form-control"
+            className="form-control"
             type="text"
             placeholder="Search"
             aria-label="Search"

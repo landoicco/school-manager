@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <form className="centered-form">
       <h2 className="centered-title">Login</h2>
-      <label for="exampleFormControlInput1" className="form-label">
+      <label htmlFor="exampleFormControlInput1" className="form-label">
         Email address
       </label>
       <input
@@ -15,7 +15,7 @@ const Login = () => {
         id="exampleFormControlInput1"
         placeholder="ex. name@example.com"
       />
-      <label for="inputPassword5" class="form-label">
+      <label htmlFor="inputPassword5" className="form-label">
         Password
       </label>
       <input
@@ -56,7 +56,7 @@ const Login = () => {
             </ul>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary form-button">
+        <button type="button" className="btn btn-primary form-button">
           Submit
         </button>
         <Link to="/access">

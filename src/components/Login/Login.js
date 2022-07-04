@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -58,9 +59,11 @@ const Login = () => {
         <button type="submit" className="btn btn-primary form-button">
           Submit
         </button>
-        <button type="button" className="btn btn-secondary form-button">
-          Request Access
-        </button>
+        <Link to="../AccessForm/AccessForm">
+          <button type="button" className="btn btn-secondary form-button">
+            Request Access
+          </button>
+        </Link>
       </div>
     </form>
   );

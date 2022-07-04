@@ -12,7 +12,7 @@ const AccessForm = () => {
         <input
           className="form-control"
           type="text"
-          placeholder="ex .John Steven Smith"
+          placeholder="ex. John Steven Smith"
           aria-label="default input example"
         />
         <label for="exampleFormControlInput1" className="form-label">
@@ -69,7 +69,7 @@ const AccessForm = () => {
                 </a>
               </li>
             </ul>
-            <button type="button" className="btn btn-primary form-button">
+            <button type="button" className="btn btn-lg btn-primary form-button">
               Submit
             </button>
           </div>

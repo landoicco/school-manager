@@ -16,23 +16,63 @@ const AccessForm = () => {
   const emailRef = React.createRef();
   const tokenRef = React.createRef();
 
-  const updateState = () => {
-    setUserData({
+  const userInputIsValid = (userInput) => {
+    // User Full name
+    if (userInput.fullName === "") {
+      alert("The Full name can not be empty!");
+      return false;
+    }
+    if (userInput.fullName.search(/\d+/g) !== -1) {
+      alert("The Full name can not include numbers!");
+      return false;
+    }
+
+    // User phone number
+    if (userInput.phone === "") {
+      alert("The phone number can not be empty!");
+      return false;
+    }
+
+    // User email
+    if (userInput.email === "") {
+      alert("The email can not be empty!");
+      return false;
+    }
+
+    // Token
+    if (userInput.token === "") {
+      alert("The token can not be empty!");
+      return false;
+    }
+    return true;
+  };
+
+  const handleFormInput = (event) => {
+    event.preventDefault();
+
+    // Collect data
+    let userInput = {
       fullName: fullNameRef.current.value,
       phone: phoneRef.current.value,
       email: emailRef.current.value,
       token: tokenRef.current.value,
-    });
-  };
+    };
 
-  const validateFormInput = (event) => {
-    event.preventDefault();
-    updateState();
+    // If user input is invalid, return!
+    if (!userInputIsValid(userInput)) {
+      console.log("Invalid input!");
+      return;
+    }
+
+    // If user input is valid, update userData state
+    console.log("Valid input!");
+    setUserData(userInput);
     console.log(userData);
   };
+
   return (
     <>
-      <form className="centered-form" onSubmit={validateFormInput}>
+      <form className="centered-form" onSubmit={handleFormInput}>
         <h2 className="centered-title">Request Access Form</h2>
         <label htmlFor="exampleFormControlInput1" className="form-label">
           Full name
@@ -49,7 +89,7 @@ const AccessForm = () => {
         </label>
         <input
           className="form-control"
-          type="text"
+          type="number"
           placeholder="ex. +(52) 5544337722"
           aria-label="default input example"
           ref={phoneRef}
@@ -69,7 +109,7 @@ const AccessForm = () => {
         </label>
         <input
           className="form-control"
-          type="text"
+          type="number"
           placeholder="ex. 73645"
           aria-label="default input example"
           ref={tokenRef}

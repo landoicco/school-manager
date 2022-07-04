@@ -59,7 +59,7 @@ const Login = () => {
         <button type="submit" className="btn btn-primary form-button">
           Submit
         </button>
-        <Link to="../AccessForm/AccessForm">
+        <Link to="/access">
           <button type="button" className="btn btn-secondary form-button">
             Request Access
           </button>

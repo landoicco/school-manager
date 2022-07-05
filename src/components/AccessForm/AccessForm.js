@@ -1,51 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { getUserJSON, emptyUserJSON } from "../../helpers/UserDataFormatter";
 import "./AccessForm.css";
 
 const AccessForm = () => {
-  const [userData, setUserData] = useState({
-    fullName: "",
-    phone: "",
-    email: "",
-    token: "",
-  });
+  const [userData, setUserData] = useState(emptyUserJSON);
 
   // Form Data References
   const fullNameRef = React.createRef();
   const phoneRef = React.createRef();
   const emailRef = React.createRef();
   const tokenRef = React.createRef();
-
-  const userInputIsValid = (userInput) => {
-    // User Full name
-    if (userInput.fullName === "") {
-      alert("The Full name can not be empty!");
-      return false;
-    }
-    if (userInput.fullName.search(/\d+/g) !== -1) {
-      alert("The Full name can not include numbers!");
-      return false;
-    }
-
-    // User phone number
-    if (userInput.phone === "") {
-      alert("The phone number can not be empty!");
-      return false;
-    }
-
-    // User email
-    if (userInput.email === "") {
-      alert("The email can not be empty!");
-      return false;
-    }
-
-    // Token
-    if (userInput.token === "") {
-      alert("The token can not be empty!");
-      return false;
-    }
-    return true;
-  };
 
   const handleFormInput = (event) => {
     event.preventDefault();
@@ -58,15 +23,21 @@ const AccessForm = () => {
       token: tokenRef.current.value,
     };
 
+    // Ask to convert userInput in a userJSON
+    let userInfoJSON = getUserJSON(userInput);
+
     // If user input is invalid, return!
-    if (!userInputIsValid(userInput)) {
+    if (!userInfoJSON) {
       console.log("Invalid input!");
       return;
     }
 
     // If user input is valid, update userData state
     console.log("Valid input!");
-    setUserData(userInput);
+    if (userData === emptyUserJSON) {
+      setUserData(userInfoJSON);
+    }
+
     console.log(userData);
   };
 

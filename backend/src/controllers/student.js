@@ -85,4 +85,4 @@ const controller = {
   },
 };
 
-module.export = controller;
+module.exports = controller;

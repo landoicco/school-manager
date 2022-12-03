@@ -1,0 +1,5 @@
+Run MongoDB container and set local volume, run the command:
+ > docker run -d -p 27017:27017 -v /home/landoicaza/Documents/LearnJavascript/school-manager/backend/mongo:/data/db --name mongoo mongo:4.0.28
+
+Run school-manager-backend Docker image, run the command
+ > // Adding

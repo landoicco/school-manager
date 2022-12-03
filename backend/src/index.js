@@ -5,7 +5,7 @@ const studentRoutes = require("./routes/student");
 const app = express();
 const port = 3900;
 
-const url = "mongodb://localhost:27017/school_manager";
+const url = "mongodb://172.18.0.2:27017/school_manager";
 
 // Load body-parser for this router. This analyzer accepts only UTF-8 codification
 app.use(bodyParser.urlencoded({ extended: false }));

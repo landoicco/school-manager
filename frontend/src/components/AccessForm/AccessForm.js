@@ -43,35 +43,35 @@ const AccessForm = () => {
   };
 
   return (
-    <div class="container-md">
+    <div class="container-sm">
       <br />    
       <Form>
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Nombre:</Form.Label>
         <Form.Control type="text" name="nombre" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Apellido paterno:</Form.Label>
         <Form.Control type="text" name="apellidoPaterno" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Apellido materno:</Form.Label>
         <Form.Control type="text" name="apellidoMaterno" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Fecha de nacimiento:</Form.Label>
         <Form.Control type="date" name="fechaNacimiento" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Email:</Form.Label>
         <Form.Control type="email" name="email" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Calle:</Form.Label>
         <Form.Control type="text" name="calle" />
         <Form.Label>Número interior:</Form.Label>
@@ -82,17 +82,17 @@ const AccessForm = () => {
         <Form.Control type="text" name="codigoPostal" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Historial de alergias:</Form.Label>
         <Form.Control as="textarea" name="historialAlergias" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Form.Label>Información del seguro médico:</Form.Label>
         <Form.Control as="textarea" name="informacionSeguroMedico" />
       </Form.Group>
       
-      <Form.Group>
+      <Form.Group class="mb-3">
         <Button type="submit" variant="primary" className="mt-3">
           Registrar
         </Button>
